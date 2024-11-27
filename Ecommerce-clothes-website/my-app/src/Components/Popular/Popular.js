@@ -7,7 +7,7 @@ const Popular = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:4000/popularinwomen')
+    fetch('https://your-render-backend-url.onrender.com/popularinwomen')
       .then((response) => {
         if (!response.ok) throw new Error("Failed to fetch popular products");
         return response.json();
