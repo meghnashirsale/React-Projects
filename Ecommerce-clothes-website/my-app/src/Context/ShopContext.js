@@ -15,7 +15,7 @@ const ShopContextProvider = (props) => {
     const [allProducts, setAllProducts] = useState([]);
     const [cartItems, setCartItems] = useState(getDefaultCart());
 
-    const backendURL = "https://your-render-backend-url.onrender.com";
+    const backendURL = "http://localhost:4000";
 
     useEffect(() => {
         // Fetch all products

@@ -32,7 +32,7 @@ formData.append('product', image);
     formData.append('old_price', productDetails.old_price);
 
     try {
-      const response = await fetch('https://your-render-backend-url.onrender.com/upload', {
+      const response = await fetch('http://localhost:4000/upload', {
         method: 'POST',
         body: formData,
       });
@@ -45,7 +45,7 @@ formData.append('product', image);
         console.log("Product added successfully:", updatedProductDetails);
   
         // Second API call to add product details to database
-        await fetch('https://your-render-backend-url.onrender.com/addproduct', {
+        await fetch('http://localhost:4000/addproduct', {
           method: 'POST',
           headers: {
             Accept: 'application/json',
